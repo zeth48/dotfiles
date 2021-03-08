@@ -18,10 +18,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'  
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-obsession'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
 Plug 'instant-markdown/vim-instant-markdown'
 
 call plug#end()
@@ -29,7 +31,7 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
-set noerrorbells visualbell t_vb=
+set noerrorbells visualbell t_vb= 
 autocmd GUIEnter * set visualbell t_vb=
 
 let g:ctrlp_map = '<c-p>'
@@ -57,3 +59,5 @@ let g:instant_markdown_autostart = 0
 "let g:instant_markdown_port = 8888
 ""let g:instant_markdown_python = 1"""''"""""""""
 
+nmap <space>e :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
