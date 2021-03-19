@@ -21,3 +21,8 @@ source ~/.config/nvim/vim-plug/plugin.vim
 " Plugin Configuration
 source ~/.config/nvim/plug-config/vim-theme.vim
 source ~/.config/nvim/plug-config/vim-telescope.vim
+source ~/.config/nvim/plug-config/lsp-config.vim
+
+
+" Lua Configuration
+luafile ~/.config/nvim/plug-config/compe-config.lua
