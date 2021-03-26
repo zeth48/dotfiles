@@ -21,6 +21,7 @@ source ~/.config/nvim/vim-plug/plugin.vim
 " Plugin Configuration
 source ~/.config/nvim/plug-config/vim-theme.vim
 source ~/.config/nvim/plug-config/vim-telescope.vim
+source ~/.config/nvim/plug-config/vim-split.vim
 source ~/.config/nvim/plug-config/lsp-config.vim
 
 
