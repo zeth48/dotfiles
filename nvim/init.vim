@@ -12,8 +12,16 @@ set noswapfile
 set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
-set colorcolumn=81
 set incsearch
+
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
 
 " Plugins
 source ~/.config/nvim/vim-plug/plugin.vim
