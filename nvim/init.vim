@@ -1,4 +1,5 @@
 set encoding=UTF-8
+set guifont=FiraCode\ NF\ 11
 filetype plugin indent on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -13,6 +14,9 @@ set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
+set tags=tags
+set completeopt=menuone,noinsert,noselect
+set shortmess+=c
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
@@ -24,14 +28,13 @@ if executable(s:clip)
 endif
 
 " Plugins
-source ~/.config/nvim/vim-plug/plugin.vim
+source ~/.config/nvim/plugin.vim
 
 " Plugin Configuration
-source ~/.config/nvim/plug-config/vim-theme.vim
-source ~/.config/nvim/plug-config/vim-telescope.vim
-source ~/.config/nvim/plug-config/vim-split.vim
-source ~/.config/nvim/plug-config/lsp-config.vim
+source ~/.config/nvim/config/vim-theme.vim
+source ~/.config/nvim/config/vim-telescope.vim
+source ~/.config/nvim/config/vim-split.vim
 
 
 " Lua Configuration
-luafile ~/.config/nvim/plug-config/compe-config.lua
+source ~/.config/nvim/config/lsp-config.lua
