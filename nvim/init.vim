@@ -17,6 +17,7 @@ set incsearch
 set tags=tags
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
+set viminfo='100,n$HOME/.config/nvim/files/info/viminfo
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
